@@ -1,0 +1,15 @@
+Comment flash un zolertia firefly :
+
+git clone "https://github.com/contiki-ng/contiki-ng.git"
+
+git submodule update --init
+
+sudo apt-get update
+sudo apt-get install gcc-arm-none-eabi gdb-arm-none-eabi
+
+On flash ensuite avec la commande :
+Pour le Zolertia RE-Mote :
+sudo make TARGET=zoul nom_du_code.upload login
+
+Pour le Zolertia Firefly :
+sudo make TARGET=zoul BOARD=firefly nom_du_code.upload login
